@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/css.css' %}">
+    <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+</head>
+<body>
+    {% for item in item %}
+    
+    <a href="{% url 'Pedido' item.id %}">{{item.nome}}</a> <!-- url {nome do caminho no lancheapp/urls.py} {valor referente ao query do banco}.id <- remete ao id para pegar um valor único -->
+    
+    {% endfor %}
+
+    <button onclick="teste()">Me clique</button>
+
+</body>
+</html>
