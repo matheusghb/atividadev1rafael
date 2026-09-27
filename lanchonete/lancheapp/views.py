@@ -5,13 +5,13 @@ from .models import ItemCardapio as Cardapio
 def index(request):
     items = Cardapio.objects.all()
     conteudo = {
-        'item': items
+        'item': items # Da acesso ao banco de dados ItemCardapio dentro do HTML. 
     }
     return render(request, 'index.html', conteudo)
 
-def Pedido(request, id):
+def Pedido(request, id): # Essa função será utilizada em index.html para receber um id dinamico e formar uma página adaptada ao item escolhido.
     item = Cardapio.objects.get(id=id)
     conteudo = {
-        'pedido': item
+        'pedido': item 
     }
     return render(request, 'pedido.html', conteudo)

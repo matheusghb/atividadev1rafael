@@ -1,4 +1,6 @@
-{% load static %}
+{% load static %} <!-- Necesssário em todos os códigos, permite o uso do comando static -->
+
+<!-- Essa é a página inicial, deve  -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,9 +12,12 @@
     <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
 </head>
 <body>
-    {% for item in item %}
+
+    <!-- Variável do banco: 'item' -->
+
+    {% for item in item %} <!-- Para {variavel local} em {array do banco} -->
     
-    <a href="{% url 'Pedido' item.id %}">{{item.nome}}</a> <!-- url {nome do caminho no lancheapp/urls.py} {valor referente ao query do banco}.id <- remete ao id para pegar um valor único -->
+    <a href="{% url 'Pedido' item.id %}">{{item.nome}}</a> <!-- url {name do caminho no lancheapp/urls.py} {valor referente ao query do banco}.id <- remete ao id para pegar um valor único -->
     
     {% endfor %}
 
