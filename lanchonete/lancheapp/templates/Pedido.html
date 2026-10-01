@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="{% static 'css/css.css' %}">
 </head>
 <body>
-
     <!-- Variável do banco: 'pedido' -->
+    <div class="apresPedido">
+    
+        <h3>{{pedido.nome}} <i>R${{pedido.preco}}</i> </h3>
+        <br> 
+        <p>em estoque: {{pedido.estoque}}</p>
+    </div>
 
-    <p>Pagina remetente a {{pedido.nome}}. <br> O preço do produto {{pedido.nome}} é {{pedido.preco}}.</p>
+    <a href="{% url 'index' %}"><button>voltar</button></a>
 </body>
 </html>

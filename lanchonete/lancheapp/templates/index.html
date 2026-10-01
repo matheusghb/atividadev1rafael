@@ -13,13 +13,35 @@
 </head>
 <body>
 
+    <header>
+        <div class="listaHeader"><ul>
+            <li><a>elemento 1</a></li>
+            <li><a>elemento 2</a></li>
+            <li><a>elemento 3</a></li>
+        </ul></div>
+    </header>
+
+    <div class="logo">
+
+        <a href="{% static 'imagens/lanches.png'%}" id="logo">
+            <img src="{% static 'imagens/lanches.png'%}" width="10%" height="10%">
+        </a>
+
+        <a>
+            <h2 id="logotexto"> Lá ele LANCHES </h2>
+        </a>
+
+    </div>
     <!-- Variável do banco: 'item' -->
 
+    <div class="pedidos">
     {% for item in item %} <!-- Para {variavel local} em {array do banco} -->
     
-    <a href="{% url 'Pedido' item.id %}">{{item.nome}}</a> <!-- url {name do caminho no lancheapp/urls.py} {valor referente ao query do banco}.id <- remete ao id para pegar um valor único -->
-    
+    <a class="listaPedido" href="{% url 'Pedido' item.id %}">{{item.nome}}</a>   R${{item.preco}}  <!-- url {name do caminho no lancheapp/urls.py} {valor referente ao query do banco}.id <- remete ao id para pegar um valor único -->
+    <br>
+    <br>
     {% endfor %}
+    </div>
 
     <button onclick="teste()">Me clique</button>
 
