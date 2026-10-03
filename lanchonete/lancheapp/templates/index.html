@@ -38,6 +38,10 @@
     {% for item in item %} <!-- Para {variavel local} em {array do banco} -->
     
     <a class="listaPedido" href="{% url 'Pedido' item.id %}">{{item.nome}}</a>   R${{item.preco}}  <!-- url {name do caminho no lancheapp/urls.py} {valor referente ao query do banco}.id <- remete ao id para pegar um valor único -->
+    
+    {% if item.imagem %}
+    <img src="{{item.imagem.url}}" alt="">
+    {% endif %}
     <br>
     <br>
     {% endfor %}

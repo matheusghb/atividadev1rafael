@@ -11,6 +11,7 @@ class ItemCardapio(models.Model):
         '2': 'Salgados',
         '3': 'Bebidas'
     },max_length=100)
+    imagem = models.ImageField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.nome} / {self.preco} / {self.estoque} / {self.categoria}"
+        return f"{self.nome} / {self.preco} / {self.estoque} / {self.categoria} / {self.imagem}"

@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import ItemCardapio
 
 class ItemAdmin(admin.ModelAdmin):
-    list_display = "nome","preco","estoque","categoria"
+    list_display = "nome","preco","estoque","categoria","imagem"
 
 # Register your models here.
 

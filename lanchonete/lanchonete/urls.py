@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static # referente a funcionalidade de ImageField
+from django.conf import settings # ditto
 
 urlpatterns = [
     path('painel/', admin.site.urls),
     path('', include('lancheapp.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # referente a funcionalidade de ImageField
+                                                                  # Conecta com a pasta MEDIA_URL em settings.py
