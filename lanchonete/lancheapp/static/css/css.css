@@ -1,7 +1,9 @@
 *{
     margin:0;
+    margin-left: 5px;
     padding:0;
     box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body {
 
@@ -11,19 +13,56 @@ body {
 
 header {
 
-    padding-top: 0.75%;
-    padding-bottom: 0.75%;
-    background-color: #8e8f9b;
+    background-color: #8e8f9bbb;
     text-align:left;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3c3d4b;
+    color: #282931;
+    margin-left: -1%;
+
+    ul{
+        list-style-type: none;
+        overflow: hidden;
+
+        li{
+            float: left;
+
+            a{
+                display: block;
+                color: #fff;
+                text-align: center;
+                padding: 10% 0%;
+                margin: 5px;
+                text-decoration: none;
+                background-color: #031C51;
+                border: #fff;
+                border-style: solid;
+                border-radius: 10px;
+
+            }
+        }
+    }
 
 }
 
+h2{
+    color: #031C51;
+}
+
+button {
+    padding: 2%;
+    background-color: #031C51;
+    color: white;
+    border-color: white;
+    border-radius: 20px;
+    border-style:solid;
+}
+
+#imagemPedido{
+    height: 10%;
+    width: 10%;
+}
 
 .apresPedido h3{
     font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
     color:#031C51;
 
     i{
@@ -42,7 +81,7 @@ header {
     #logotexto {
 
         color: #031C51;
-        font-family: Arial, Helvetica, sans-serif;
+
 
     }
 
@@ -64,14 +103,18 @@ header {
 
 a.listaPedido {
 
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: underline;
-    color: #3c3d4b;
-}
+    text-decoration: none;
+    font-size: large;
+    color:#031C51;
+    font-weight: bold;
 
-p {
-
-    color: #3c3d4b;
-    font-family: Arial, Helvetica, sans-serif;
 
 }
+.listapedido i{
+    color: #71727e;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: medium;
+}
+
+

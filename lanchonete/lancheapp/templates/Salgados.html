@@ -5,8 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{pedido.nome}}</title>
+    <title>Salgados</title>
     <link rel="stylesheet" href="{% static 'css/css.css' %}">
+    <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
 </head>
 <body>
 
@@ -30,16 +31,25 @@
 
     </div>
 
-
-    <!-- Variável do banco: 'pedido' -->
-    <div class="apresPedido">
-    
-        <h3>{{pedido.nome}} <i>R${{pedido.preco}}</i> </h3>
-        <img src="{{pedido.imagem.url}}" alt="" id="imagemPedido">
-        <br> 
-        <p>em estoque: {{pedido.estoque}}</p>
+    <div class="pedidos">
+        <br>
+        <h2>Salgados</h2>
+    {% for Salgados in Salgados %} <!-- Para {variavel local} em {array do banco} -->
+    {% if Salgados.categoria == "2" %}
+        <a class="listaPedido" href="{% url 'Pedido' Salgados.id %}">{{Salgados.nome}} </a> <i>R${{Salgados.preco}}</i> <!-- url {name do caminho no lancheapp/urls.py} {valor referente ao query do banco}.id <- remete ao id para pegar um valor único -->
     </div>
+    <div>
 
+    {% if Salgados.imagem %}
+
+    <img src="{{Salgados.imagem.url}}" alt="" id="imagemPedido">
+
+    {% endif %}
+    {% endif %}
+
+    <br>
+    {% endfor %}
+    
+    </div>
     <a href="{% url 'index' %}"><button>voltar</button></a>
 </body>
-</html>

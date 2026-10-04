@@ -5,10 +5,10 @@
 ***Kaio Mariano 01813076*** <br>
 ***Alex Ferreira - 01842504*** <br>
 
+**Aviso: "pip install Pillow" antes de rodar o servidor**
+
 # A Fazer <br>
 !!!APAGAR NO FIM DO PROJETO  
-> Finalizar os .html  
-> Adicionar imagens  
 > Adicionar layout de loja  
 > Enfeitar com .css
 > Introduzir algum uso de .js

@@ -15,3 +15,24 @@ def Pedido(request, id): # Essa função será utilizada em index.html para rece
         'pedido': item 
     }
     return render(request, 'pedido.html', conteudo)
+
+def Bebidas(request): 
+    item = Cardapio.objects.all()
+    conteudo = {
+        'Bebidas': item 
+    }
+    return render(request, 'Bebidas.html', conteudo)
+
+def Salgados(request): 
+    item = Cardapio.objects.all()
+    conteudo = {
+        'Salgados': item 
+    }
+    return render(request, 'Salgados.html', conteudo)
+
+def Sanduiches(request): 
+    item = Cardapio.objects.all()
+    conteudo = {
+        'Sanduiches': item 
+    }
+    return render(request, 'Sanduiches.html', conteudo)
