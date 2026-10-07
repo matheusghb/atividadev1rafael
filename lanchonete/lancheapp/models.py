@@ -12,6 +12,7 @@ class ItemCardapio(models.Model):
         '3': 'Bebidas'
     },max_length=100)
     imagem = models.ImageField(blank=True, null=True)
+    desc = models.CharField('Descrição', max_length=300, default="")
 
     def __str__(self):
-        return f"{self.nome} / {self.preco} / {self.estoque} / {self.categoria} / {self.imagem}"
+        return f"{self.nome} / {self.preco} / {self.estoque} / {self.categoria} / {self.imagem} / {self.desc}"

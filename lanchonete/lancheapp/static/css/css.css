@@ -1,99 +1,162 @@
 *{
     margin:0;
-    margin-left: 5px;
     padding:0;
     box-sizing:border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
 
-    background-color: #c7c8d3;
+    background: linear-gradient(to bottom, var(--cor2) 0%, var(--cor4) 13vw);
+    padding-inline: 3%;
 
+}
+
+:root {
+
+    --cor1: #00027a;
+    --cor2: #da1900;
+    --cor4: #ffffff;
+
+
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
 
-    background-color: #8e8f9bbb;
-    text-align:left;
-    color: #282931;
-    margin-left: -1%;
+    * {
 
-    ul{
-        list-style-type: none;
-        overflow: hidden;
+        color: var(--cor1);
 
-        li{
-            float: left;
+    }
 
-            a{
-                display: block;
-                color: #fff;
-                text-align: center;
-                padding: 10% 0%;
-                margin: 5px;
-                text-decoration: none;
-                background-color: #031C51;
-                border: #fff;
-                border-style: solid;
-                border-radius: 10px;
-
-            }
+    .logo {
+        
+        box-shadow: 0px 3px 7px .6px black;
+        padding: 1%;
+        padding-inline: 0%;
+        display: flex;
+        height: 130px; 
+        align-items: center;
+        background: linear-gradient(to left, var(--cor1) 0%, var(--cor4) 40%);
+        img {
+            margin-inline: 1%;
+            aspect-ratio: 1; 
+            height: 100%;
         }
     }
 
-}
+    .btnline {
 
-h2{
-    color: #031C51;
-}
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-items: space-evenly;
+        border-top: 1px solid var(--cor4);
+        box-shadow: 0px 3px 7px .6px black;
+        border-radius: 0px 0px 20px 20px;
 
-button {
-    padding: 2%;
-    background-color: #031C51;
-    color: white;
-    border-color: white;
-    border-radius: 20px;
-    border-style:solid;
-}
+        a:first-of-type {
 
-#imagemPedido{
-    height: 10%;
-    width: 10%;
-}
+            border-radius: 0px 0px 0px 20px;
 
-.apresPedido h3{
-    font-size: large;
-    color:#031C51;
+        }
 
-    i{
-        color: #71727e;
-        font-weight: lighter;
-    }
-}
-.logo {
+        a:last-of-type {
 
-    display: flex;
-    height: 100px;
-    align-items: center;
-    padding-top: 0.1%;
-    padding-bottom: 0.1%;
+            border-radius: 0px 0px 20px 0px;
 
-    #logotexto {
+        }
 
-        color: #031C51;
+        a {
+            
+            flex: 1;
+            text-align: center;
+            color: var(--cor4);
+            padding: 1%;
+            text-transform: uppercase;
+            font-weight: 900;
+            background: var(--cor1);
+            box-shadow: 0px 0px 8px 3px rgb(255, 255, 255, .5) inset;
+        }
 
+        a:hover {
+
+            background: var(--cor2);
+
+        }
 
     }
 
-    #logo {
+}
 
-        height: 100%;
+.pedidos, .pedido, .sobrenos {
+
+    margin-top: 2%;
+
+    h2 {
+
+        border: 2px solid var(--cor1);
+        border-inline: none;
+        color: var(--cor1);
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1%;
+        padding-inline: 0%;
+        text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+
+    }
+
+    a {
+
+        display: flex;
+        margin-inline: 10%;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        background: linear-gradient(to right, var(--cor1) 0%, rgba(0,0,0,0.0) 50%);
+        border-radius: 10px;
 
         img {
 
-            height: 100%;
-            width: 100%;
-            object-fit: contain;
+            background-color: var(--cor4);
+            object-fit: cover;
+            width: 20%;
+            border: 6px solid var(--cor1);
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.6);
+
+        }
+
+        h1 {
+
+            background-color: var(--cor1);
+            padding: .8%;
+            border-radius: 10px;
+            color: var(--cor4);
+            font-size: 2vw;
+            box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.6);
+
+        }
+
+    }
+
+    a:hover {
+
+        background: linear-gradient(to right, var(--cor2) 0%, rgba(0,0,0,0.0) 50%);
+
+        img {
+
+            border-color: var(--cor2);
+
+        }
+
+        h1 {
+
+            background-color: var(--cor2);
 
         }
 
@@ -101,20 +164,129 @@ button {
 
 }
 
-a.listaPedido {
+.pedido {
 
-    text-decoration: none;
-    font-size: large;
-    color:#031C51;
-    font-weight: bold;
+    .produto {
 
+        margin-top: 2%;
+        display: flex;
+        background-color: var(--cor2);
+        padding: 2%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 8px 3px var(--cor1) inset;
+
+        img {
+
+            margin-right: 2%;
+            background-color: var(--cor4);
+            object-fit: cover;
+            width: 40%;
+            border: 10px solid var(--cor1);
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px 4px var(--cor4);
+
+        }
+
+        .info {
+
+            display: flex;
+            flex-direction: column;
+            padding-left: 2%;
+            border-left: 2px solid var(--cor1);
+            max-width: 50%;
+
+            * {
+
+                color: var(--cor4);
+
+            }
+
+            #preco {
+
+                margin-top: 2%;
+                font-size: 3vw;
+                background: linear-gradient(to right, var(--cor1) 0%, rgba(0,0,0,0) 70%);
+                padding-left: 1%;
+
+            }
+
+            #desc {
+
+                flex: 1;
+                margin-inline: 0%;
+                border: 1px solid var(--cor4);
+                border-inline: none;
+                padding: 2%;
+                margin: 2%;
+                margin-inline: 0%;
+                padding-inline: 0%;
+                font-style: italic;
+                font-size: 1.5vw;
+
+            }
+
+            #stock {
+
+                text-align: end;
+                font-style: italic;
+                background: linear-gradient(to left, var(--cor1) 0%, rgba(0,0,0,0) 60%);
+                margin-top: auto;
+                padding: 1%;
+                font-size: 2vw;
+
+            }
+
+        }
+
+    }
 
 }
-.listapedido i{
-    color: #71727e;
-    font-weight: lighter;
-    text-decoration: none;
-    font-size: medium;
+
+.sobrenos {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+
+        width: 100%;
+
+    }
+
+    img {
+
+        aspect-ratio: 1;
+        width: 50%;
+
+    }
+
+    p {
+
+        text-align: center;
+
+    }
+
 }
 
+footer {
 
+    margin-top: 2%;
+
+    div {
+
+        display: flex;
+        justify-content: space-between;
+        padding: 2%;
+
+        a {
+
+            color: black;
+
+        }
+
+    }
+
+}

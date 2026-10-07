@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type='text/css' href="{% static 'css/css.css' %}">
+    <title>Sobren Nós</title>
+    <link rel="icon" type="image/png" href="{% static 'imagens/lanches.png' %}">
+</head>
+<body>
+    <div class="sobrenos">
+        <h2>Sobre nós</h2>
+        <img src="{% static 'imagens/uninassaulogo.png' %}" alt="">
+        <p>Isso é um projeto feito por um grupo do <b>quarto semestre</b> do curso de <b>Ciências da Computação</b>, na cadeira de <b>Framework Back-end</b> pelo professor <b>Rafael</b>.<br><br>O projeto envolvia seguir um tema para a confecção de um <b>Site DJANGO</b> com uso de banco de dados e criação dinãmica de páginas. O nosso tema obtido foi <b>"Lanchonete"</b>.<br>Adicionalmente ao uso de banco de dados e páginas dinâmicas, usamos operações lógicas (if/else no html) e produzimos um padrão de header e footer para todas as páginas no javascript, e atributos de CHOICE e IMAGEFIELD dentro do banco de dados. As imagens foram preenchidas com imagens da internet.</p>
+    </div>
+</body>
+<script>
+    var pagina = 'Sobre nos'
+</script>
+<script src="{% static 'js/script.js' %}" type="text/javascript">
+</script>
+</html>

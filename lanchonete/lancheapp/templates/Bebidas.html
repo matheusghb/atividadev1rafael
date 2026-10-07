@@ -7,51 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bebidas</title>
     <link rel="stylesheet" href="{% static 'css/css.css' %}">
-    <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="{% static 'imagens/lanches.png' %}">
 </head>
 <body>
 
-    <header>
-        <div class="listaHeader"><ul>
-            <li><a href="{% url 'Bebidas' %}">bebidas</a></li>
-            <li><a href="{% url 'Salgados' %}">salgados</a></li>
-            <li><a href="{% url 'Sanduiches'%}">sanduíches</a></li>
-        </ul></div>
-    </header>
-
-    <div class="logo">
-
-        <a href="{% static 'imagens/lanches.png' %}" id="logo">
-            <img src="{% static 'imagens/lanches.png' %}" width="10%" height="10%">
-        </a>
-
-        <a>
-            <h2 id="logotexto"> Lá ele LANCHES </h2>
-        </a>
-
-    </div>
-
     <div class="pedidos">
-        <br>
         <h2>Bebidas</h2>
-    {% for Bebidas in Bebidas %} <!-- Para {variavel local} em {array do banco} -->
-    {% if Bebidas.categoria == "3" %}
-        <a class="listaPedido" href="{% url 'Pedido' Bebidas.id %}">{{Bebidas.nome}} </a> <i>R${{Bebidas.preco}}</i> <!-- url {name do caminho no lancheapp/urls.py} {valor referente ao query do banco}.id <- remete ao id para pegar um valor único -->
-    </div>
-    <div>
 
-    {% if Bebidas.imagem %}
+        {% for cat in cat %} <!-- Para {variavel local} em {array do banco} -->
+        {% if cat.categoria == "3" %}
+        
+        <a class="pedidos" id="{{cat.nome}}" href="{% url 'Pedido' cat.id %}">
+            <h1>{{cat.nome}} - <b>{{cat.preco}}</b></h1>
+            <img src="{{cat.imagem.url}}">
+        </a>
 
-    <img src="{{Bebidas.imagem.url}}" alt="" id="imagemPedido">
-
-    {% endif %}
-    {% endif %}
-
-    <br>
-    {% endfor %}
+        {% endif %}
+        {% endfor %}
     
     </div>
 
-
-    <a href="{% url 'index' %}"><button>voltar</button></a>
 </body>
+<script>
+    var pagina = 'Bebidas'
+</script>
+<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+</html>
